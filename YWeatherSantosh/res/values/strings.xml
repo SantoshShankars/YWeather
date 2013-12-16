@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">YWeather Santosh</string>
+    <string name="app_id">1464493637110236</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+ 	<string name="go_button">Search</string>
+ 	<string name="far">\u00B0F</string>
+ 	<string name="cent">\u00B0C</string>
+ 	<string name="forecast">Forecast</string>
+ 	<string name="Day">Day</string>
+ 	<string name="Text">Weather</string>
+ 	<string name="High">High</string>
+ 	<string name="Low">Low</string>
+ 	<string name="WeatherFB">Share Current Weather</string>
+ 	<string name="ForecastFB">Share Weather Forecast</string>
+ 	<string name="postToFB">Post To Facebook</string>
+ 	<string name="postWeather">Post Current Weather</string>
+ 	<string name="postForecast">Post Weather Forecast</string>
+ 	<string name="Cancel">Cancel</string>
+</resources>

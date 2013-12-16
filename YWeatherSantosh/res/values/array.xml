@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+<array name="weatherPost">
+<item>@string/postWeather</item>
+<item>@string/Cancel</item>
+</array>
+
+<array name="forecastPost">
+<item>@string/postForecast</item>
+<item>@string/Cancel</item>
+</array>
+    
+</resources>

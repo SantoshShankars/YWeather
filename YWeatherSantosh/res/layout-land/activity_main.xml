@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@drawable/rain" 
+>
+	<LinearLayout
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" >
+		<EditText
+		android:id="@+id/url_field"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0"
+		android:lines="1"
+		android:textColor="#FFFFFF"
+		 />
+		
+		<RadioGroup
+        android:id="@+id/tempUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+ 
+        <RadioButton
+            android:id="@+id/radioFar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/far" 
+            android:checked="true" 
+            android:textColor="#FFFFFF"/>
+ 
+        <RadioButton
+            android:id="@+id/radioCent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cent"
+            android:textColor="#FFFFFF" />
+        </RadioGroup>
+        
+		<Button
+		android:id="@+id/go_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/go_button" />
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/cityLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="50dp" >
+	<TextView
+	    android:id="@+id/cityName"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:textSize="30dp"
+	    android:paddingBottom="5dp"
+	    android:textColor="#FFFFFF">
+	</TextView>	
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/regCntyLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="24dp" >
+	<TextView
+	    android:id="@+id/regionCountry"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:textSize="18dp"
+	    android:paddingBottom="5dp"
+	    android:textColor="#FFFFFF">
+	</TextView>	
+	</LinearLayout>
+	<LinearLayout
+	   android:id="@+id/imgLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="40dp" 
+		>
+	<ImageView
+	    android:id="@+id/imageWeather"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:textAlignment="center"
+	    android:paddingBottom="5dp">
+	</ImageView>	
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/weatherLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="30dp" >
+	<TextView
+	    android:id="@+id/weatherText"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:textSize="18dp"
+	    android:textColor="#FFFFFF">
+	</TextView>	
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/tempLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="20dp"
+	 >
+	<TextView
+	    android:id="@+id/weatherTemp"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:textSize="18dp"
+	    android:textColor="#FFFFFF">
+	</TextView>	
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/forecastLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="20dp" >
+	<TextView
+	    android:id="@+id/forecastHeader"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:paddingLeft="70dp"
+	    android:textSize="18dp"
+	    android:textColor="#FFFFFF"
+	    >
+	</TextView>	
+	</LinearLayout>
+
+	<TableLayout
+	    android:id="@+id/weatherTable"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="10dp"  
+	    android:visibility="invisible">
+		
+	<!-- android:visibility="invisible" 
+	android:background="#fcfcfc"-->
+	<TableRow 
+	        android:id="@+id/fR0DR"
+	        android:layout_width="wrap_content"
+	        android:layout_height="20dp"
+	         android:gravity="center"
+	         android:layout_margin="5dp"
+	         >
+	    	<TextView android:id="@+id/fR0Day"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:paddingRight="5dp"
+	    	    android:textSize="18dp"
+	    	    android:textColor="#FFFFFF"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR0Text"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:paddingRight="5dp"
+	    	    android:textSize="18dp"
+	    	    android:textColor="#FFFFFF"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR0High"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:paddingRight="5dp"
+	    	    android:textSize="18dp"
+	    	    android:textColor="#FFFFFF"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp">
+	    	    
+	    	</TextView>
+	    	<TextView android:id="@+id/fR0Low"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:paddingRight="5dp"
+	    	    android:textSize="18dp"
+	    	    android:textColor="#FFFFFF"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    	</TableRow>
+	    	
+	    <TableRow 
+	        android:id="@+id/fR1DR"
+	        android:layout_width="fill_parent"
+	        android:layout_height="20dp"
+	         android:gravity="center"
+	         
+	         >
+	    	<TextView android:id="@+id/fR1Day"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:paddingRight="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR1Text"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:paddingRight="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR1High"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:paddingRight="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_margin="2dp">
+	    	    
+	    	</TextView>
+	    	<TextView android:id="@+id/fR1Low"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:paddingRight="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_margin="2dp">
+	    	</TextView>"
+	    </TableRow>
+	    
+	    <TableRow 
+	        android:id="@+id/fR2DR"
+	        android:layout_width="fill_parent"
+	        android:layout_height="20dp"
+	         android:gravity="center"
+	         
+	         >
+	    	<TextView android:id="@+id/fR2Day"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR2Text"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR2High"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR2Low"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:textColor="#FFFFFF"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    </TableRow>
+	    
+	    <TableRow 
+	        android:id="@+id/fR3DR"
+	        android:layout_width="fill_parent"
+	        android:layout_height="20dp"
+	         android:gravity="center"
+	         >
+	    	<TextView android:id="@+id/fR3Day"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR3Text"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR3High"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textSize="18dp"
+	    	    android:textColor="#FFFFFF">
+	    	    
+	    	</TextView>
+	    	<TextView android:id="@+id/fR3Low"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:textColor="#FFFFFF"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp">
+	    	</TextView>
+	    </TableRow>
+	    
+	    <TableRow 
+	        android:id="@+id/fR4DR"
+	        android:layout_width="fill_parent"
+	        android:layout_height="20dp"
+	         android:gravity="center"
+	         >
+	    	<TextView android:id="@+id/fR4Day"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR4Text"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textSize="18dp"
+	    	    android:textColor="#FFFFFF">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR4High"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	    
+	    	</TextView>
+	    	<TextView android:id="@+id/fR4Low"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	</TextView>
+	    </TableRow>
+	    
+	    <TableRow 
+	        android:id="@+id/fR5DR"
+	        android:layout_width="fill_parent"
+	        android:layout_height="20dp"
+	         android:gravity="center"
+	         >
+	    	<TextView android:id="@+id/fR5Day"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR5Text"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	</TextView>
+	    	<TextView android:id="@+id/fR5High"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	    
+	    	</TextView>
+	    	<TextView android:id="@+id/fR5Low"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="fill_parent"
+	    	    android:paddingLeft="5dp"
+	    	    android:textSize="18dp"
+	    	    android:background="@drawable/border"
+	    	    android:layout_margin="2dp"
+	    	    android:textColor="#FFFFFF">
+	    	</TextView>
+	    </TableRow>
+	</TableLayout>
+	
+	<LinearLayout
+	android:id="@+id/WeatherFBLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:visibility="invisible" 
+	android:paddingTop="10dp"
+	
+	>
+	<TextView
+	    android:id="@+id/WeatherFB"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:textColor="#FFFFFF"
+	    android:clickable="true"
+	    android:text="@string/WeatherFB">
+	</TextView>	
+	</LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/ForecastFBLayout"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:visibility="invisible"
+	android:paddingTop="10dp">
+	<TextView
+	    android:id="@+id/ForecastFB"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:textColor="#FFFFFF"
+	    android:clickable="true"
+	    android:text="@string/ForecastFB">
+	</TextView>	
+	</LinearLayout>
+</LinearLayout>
